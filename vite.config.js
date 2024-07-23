@@ -1,8 +1,16 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    base: "/Rubiks-Cube-AlgTrainer",
-    plugins: [react()],
+  plugins: [react()],
+  base: '/Rubiks-Cube-AlgTrainer/',  // Ensure this matches your GitHub Pages URL
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    mimeTypes: {
+      'text/jsx': ['jsx']
+    }
+  }
 });
