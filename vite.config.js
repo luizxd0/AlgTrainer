@@ -4,13 +4,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Rubiks-Cube-AlgTrainer/',  // Ensure this matches your GitHub Pages URL
+  base: '/Rubiks-Cube-AlgTrainer/',  // This should match your GitHub Pages URL
   build: {
-    outDir: 'dist',
+    outDir: 'dist',  // This is where Vite outputs the built files
   },
-  server: {
-    mimeTypes: {
-      'text/jsx': ['jsx']
-    }
-  }
 });
